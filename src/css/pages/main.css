@@ -1,0 +1,25 @@
+.img-container{
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.img-container-dark{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.img-container .header-box{
+    /* top: 50%;
+    transform: perspective(1px) translateY(-50%); */
+}
+.img-container .header-box .name{
+    font-size: 3.5em;
+}
+.img-container .header-box .slogan{
+    font-size: 1.3em;
+}
+.img-container .header-box .b-local{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius:2em;
+    padding: .4em 1.3em;
+    font-size: .95em;
+    border: 2px solid #fff;
+}
