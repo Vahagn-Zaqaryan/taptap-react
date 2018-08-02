@@ -4,7 +4,7 @@
     background-size: cover;
 }
 .img-container-dark{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 .img-container .header-box{
     /* top: 50%;
@@ -15,6 +15,7 @@
 }
 .img-container .header-box .slogan{
     font-size: 1.3em;
+    color: #cecece;
 }
 .img-container .header-box .b-local{
     background-color: rgba(0, 0, 0, 0);

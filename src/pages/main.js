@@ -17,7 +17,7 @@ class App extends Component {
                             <h1 className="f-f--ourF name">TapTap</h1>
                         </div>
                         <div className="row-flex m--8">
-                            <span className="f-f--ourF slogan">Turn your passion for your city into a job.</span>
+                            <span className="f-f--ourF slogan">Turn your <span className="c--white">passion</span> for your city into a <span className="c--white">job</span>.</span>
                         </div>
                         <div className="row-flex m--8" style={{margin: '18px'}}>
                             <button className="f-f--ourF b-local c--white oln--none">Become a Local</button>
