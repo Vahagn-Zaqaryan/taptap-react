@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/tss.css';
 import '../css/pages/main.css';
+import Logo from '../img/logo.png'
 import Banner from '../img/banner.png';
 class App extends Component {
   render() {
     return (
       <div className="container">
         <aside></aside>
-        <nav></nav>
+        <nav className="pst--abs">
+            <div className="logo">
+                <img src={Logo} alt="Logo" title="Logo"/>
+            </div>
+        </nav>
         <header className="w--full h--full">
             <div className="w--full h--full img-container d--flex" style={{backgroundImage: `url(${Banner})`}}>
                 <div className="w--full h--full img-container-dark d--flex justify-center align-center">
@@ -27,9 +32,17 @@ class App extends Component {
             </div>
         </header>
         <main>
-            <section></section>
-            <section></section>
-            <section></section>
+            <section className="tour_section d--flex justify-center align-center">
+                <div className=""></div>
+                <div className=""></div>
+                <div className=""></div>
+            </section>
+            <section className="">
+
+            </section>
+            <section className="">
+
+            </section>
         </main>
         <footer></footer>
       </div>

@@ -24,3 +24,27 @@
     font-size: .95em;
     border: 2px solid #fff;
 }
+header{
+    z-index: 1;
+}
+nav{
+    padding: .85em 4em;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+nav .logo img{
+    width: 45px;
+}
+main{
+    padding: 10px;
+}
+main .tour_section div{
+    width: 314px;
+    height: 409px;
+    border-radius: 23px;
+    background-color: black;
+}
+main .tour_section div:not(:last-child){
+    margin-right: 10px;
+}
