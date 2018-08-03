@@ -37,14 +37,96 @@ nav .logo img{
     width: 45px;
 }
 main{
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 3em 1em;
 }
-main .tour_section div{
-    width: 314px;
-    height: 409px;
+.tour_section .tour_box{
+    margin: auto;
+    width: 900px;
+}
+.flex-container {
+    display: flex;
+}
+.flex-container > div {
+    flex: 1;
+}
+.section-name{
+    font-size: 30pt;
+    margin-bottom: 15px;
+}
+.tour_card{
+    background-color: #ebebeb;
+    height: 377px;
     border-radius: 23px;
-    background-color: black;
+    margin: 7.5px;
 }
-main .tour_section div:not(:last-child){
-    margin-right: 10px;
+.tour_card .card-img{
+    background-color: #000;
+    height: 234px;
+    border-radius: 23px 23px 0 0;
+    background-position: center;
+    background-size: cover;
+}
+.tour_card .card-info{
+    padding: 6px 10px;
+}
+.tour_card .card-info .status{
+    color: #fff;
+    background: linear-gradient(45deg, #3cd48f 0%,#3cd4c7 100%,#7db9e8 100%);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -36px;
+    font-size: 13pt;
+}
+.tour_card .card-info .location{
+    color: #535353;
+    font-size: 9pt;
+    font-weight: bolder;
+    margin-bottom: .5em;
+}
+.tour_card .card-info .name{
+    color: #000;
+    font-size: 14pt;
+    font-weight: bolder;
+    margin-bottom: .5em;
+}
+.tour_card .card-info .rate{
+    margin-bottom: .4em;
+}
+.tour_card .card-info .rate img{
+    width: 13px;
+    margin-right: 3px;
+}
+.tour_card .card-info .rate span{
+    font-weight: bold;
+    color: #000;
+    font-size: 11pt;
+}
+.tour_card .card-info .autor{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+}
+.tour_card .card-info .autor .img{
+    width: 29px;
+    height: 29px;
+    border-radius: 100%;
+    background-color: #000;
+    background-size: 100%;
+}
+.tour_card .card-info .autor .tour-by{
+    font-size: 9.5pt;
+    margin: 3px 0 0 5px;
+}
+.tour_card .card-info .autor .tour-by span{
+    font-weight: bold;
+    color: #61c9f8;
 }
