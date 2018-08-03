@@ -1,9 +1,12 @@
 {
-  "main.css": "static/css/main.ead55b13.css",
-  "main.css.map": "static/css/main.ead55b13.css.map",
-  "main.js": "static/js/main.efbb04cf.js",
-  "main.js.map": "static/js/main.efbb04cf.js.map",
+  "main.css": "static/css/main.66e9f4c3.css",
+  "main.css.map": "static/css/main.66e9f4c3.css.map",
+  "main.js": "static/js/main.0228e411.js",
+  "main.js.map": "static/js/main.0228e411.js.map",
   "static\\media\\FredokaOne-Regular.ttf": "static/media/FredokaOne-Regular.5165c0fa.ttf",
+  "static\\media\\autor_img.jpg": "static/media/autor_img.97a80a38.jpg",
   "static\\media\\banner.png": "static/media/banner.86266771.png",
-  "static\\media\\maket.png": "static/media/maket.711b1940.png"
+  "static\\media\\maket.png": "static/media/maket.711b1940.png",
+  "static\\media\\star.svg": "static/media/star.16a5a708.svg",
+  "static\\media\\yerevan.jpg": "static/media/yerevan.da028c4f.jpg"
 }
