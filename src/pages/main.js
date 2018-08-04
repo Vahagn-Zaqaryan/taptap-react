@@ -10,10 +10,33 @@ import Yerevan from '../img/yerevan.jpg';
 import Arrow_Right from '../img/arrow_right.svg';
 import Clock from '../img/clock.jpg';
 import Share from '../img/share.svg';
+import TourGuide from '../img/tour_guide.jpg';
 class App extends Component {
 
     handleClickOnBLocal(){
-        alert("Hello Bro");
+        let main = document.getElementById("main");
+        function doScrolling(duration) {
+            let startingY = window.pageYOffset
+            let elementY = main.offsetTop
+            let targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
+            let diff = targetY - startingY
+            let easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
+            let start
+
+            if (!diff) return
+                window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp
+            let time = timestamp - start
+            let percent = Math.min(time / duration, 1)
+            percent = easing(percent)
+
+            window.scrollTo(0, startingY + diff * percent)
+                if (time < duration) {
+                    window.requestAnimationFrame(step)
+                }
+            })
+        }
+        doScrolling(1000);
     }
     render() {
         return (
@@ -41,7 +64,7 @@ class App extends Component {
                     </div>
                 </div>
             </header>
-            <main>
+            <main id="main">
                 <section className="tour_section">
                     <div className="tour_box">
                         <div className="flex-container font-w--bold section-name">
@@ -59,64 +82,70 @@ class App extends Component {
                         </div>
                         <div className="flex-container kkk">
                             <div className="tour_card">
-                                <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
-                                <div className="card-info">
-                                    <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
-                                    <div className="location">YEREVAN • ARMENIA</div>
-                                    <div className="name">Cool and Fucking Tours With Hovo Mkhitaryan in YVN</div>
-                                    <div className="rate">
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <span className="rate_number">192</span>
+                                <Link to="/experiences/1">
+                                    <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
+                                    <div className="card-info">
+                                        <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
+                                        <div className="location">YEREVAN • ARMENIA</div>
+                                        <div className="name">Cool and Fucking Tours With Hovo Mkhitaryan in YVN</div>
+                                        <div className="rate">
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <span className="rate_number">192</span>
+                                        </div>
+                                        <div className="autor">
+                                            <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
+                                            <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
+                                        </div>
                                     </div>
-                                    <div className="autor">
-                                        <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
-                                        <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="tour_card">
-                                <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
-                                <div className="card-info">
-                                    <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
-                                    <div className="location">YEREVAN • ARMENIA</div>
-                                    <div className="name">Cool Tours With Hovo Mkhitaryan in YVN</div>
-                                    <div className="rate">
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <span className="rate_number">192</span>
+                                <Link to="/experiences/2">
+                                    <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
+                                    <div className="card-info">
+                                        <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
+                                        <div className="location">YEREVAN • ARMENIA</div>
+                                        <div className="name">Cool Tours With Hovo Mkhitaryan in YVN</div>
+                                        <div className="rate">
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <span className="rate_number">192</span>
+                                        </div>
+                                        <div className="autor">
+                                            <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
+                                            <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
+                                        </div>
                                     </div>
-                                    <div className="autor">
-                                        <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
-                                        <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="tour_card">
-                                <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
-                                <div className="card-info">
-                                    <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
-                                    <div className="location">YEREVAN • ARMENIA</div>
-                                    <div className="name">Cool Tours With Hovo Mkhitaryan in YVN</div>
-                                    <div className="rate">
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <img src={Star_Rate} alt="Star" title="Star"/>
-                                        <span className="rate_number">192</span>
+                                <Link to="/experiences/3">
+                                    <div className="card-img" style={{backgroundImage: `url(${Yerevan})`}}></div>
+                                    <div className="card-info">
+                                        <div className="status justify-center align-center"><div className="d-flex">Free</div></div>
+                                        <div className="location">YEREVAN • ARMENIA</div>
+                                        <div className="name">Cool Tours With Hovo Mkhitaryan in YVN</div>
+                                        <div className="rate">
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <img src={Star_Rate} alt="Star" title="Star"/>
+                                            <span className="rate_number">192</span>
+                                        </div>
+                                        <div className="autor">
+                                            <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
+                                            <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
+                                        </div>
                                     </div>
-                                    <div className="autor">
-                                        <div className="img" style={{backgroundImage: `url(${Autor_Img})`}}></div>
-                                        <div className="tour-by">Tour by <span className="rate_number">Vahagn Zaqaryan</span></div>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -183,8 +212,20 @@ class App extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="">
-
+                <section className="b-tour-guide">
+                    <div className="img w--full h--full-p" style={{backgroundImage: `url(${TourGuide})`}}>
+                        <div className="img-g w--full h--full-p">
+                            <div className="text-box text-a--center d--flex justify-center align-center">
+                                <div className="f-f--ourF big-text">Do You Want to Become a Tour Guide?</div>
+                                <div className="info font-w--bold">Lorem ipsum dolor sit amet, id eos cibo maiestatis instructior, quis affert adipisci ne ius.</div>
+                                <div className="button f-f--ourF">
+                                    <button className="f-f--ourF">
+                                        Become a Guide
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer></footer>

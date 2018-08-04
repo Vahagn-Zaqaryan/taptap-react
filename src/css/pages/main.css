@@ -46,7 +46,7 @@ nav .logo img{
 }
 main{
     box-sizing: border-box;
-    padding: 3em 1em;
+    padding: 3em 0 0 0;
 }
 .tour_section{
     margin-bottom: 3em;
@@ -118,6 +118,10 @@ main{
     position: relative;
     top: -36px;
     font-size: 13pt;
+}
+.tour_card a{
+    text-decoration: none;
+    color: inherit;
 }
 .tour_card .card-info .location{
     color: #535353;
@@ -262,7 +266,43 @@ main{
 
 
 
+.b-tour-guide{
+    width: 100%;
+    height: auto;
+}
+.b-tour-guide .img{
+    background-size: cover;
+    background-position: center;
+}
+.b-tour-guide .img .img-g{
+    padding: 3em 0.2em;
+    background: linear-gradient(45deg, rgba(60, 212, 143, 0.72) 0%, rgba(85, 166, 161, 0.72) 100%);
+}
+.b-tour-guide .img .img-g .text-box{
+    flex-direction: column;
+    color: #fff;
+}
+.b-tour-guide .img .img-g .text-box .big-text{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.b-tour-guide .img .img-g .text-box .info{
+    font-size: 13px;
+    width: 27vw;
+    margin-bottom: 15px;
+}
+.b-tour-guide .img .img-g .text-box .button{
 
+}
+.b-tour-guide .img .img-g .text-box .button button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+}
 /* MEDIA */
 
 /* Extra small devices (phones, 600px and down) */
@@ -282,6 +322,9 @@ main{
     }
     .all-view{
         margin-left: 0;
+    }
+    .b-tour-guide .img .img-g .text-box .info{
+        width: 70vw;
     }
 }
 
@@ -303,6 +346,9 @@ main{
     .all-view{
         margin-left: 0;
     }
+    .b-tour-guide .img .img-g .text-box .info{
+        width: 60vw;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -322,6 +368,9 @@ main{
     }
     .all-view{
         margin-left: 0;
+    }
+    .b-tour-guide .img .img-g .text-box .info{
+        width: 45vw;
     }
 }
 
@@ -343,6 +392,9 @@ main{
     .all-view{
         margin-left: 15px;
     }
+    .b-tour-guide .img .img-g .text-box .info{
+        width: 35vw;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -362,5 +414,8 @@ main{
     }
     .all-view{
         margin-left: 15px;
+    }
+    .b-tour-guide .img .img-g .text-box .info{
+        width: 350px;
     }
 }
