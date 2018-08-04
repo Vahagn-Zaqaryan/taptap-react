@@ -1,6 +1,7 @@
 .img-container{
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center;
+    /* background-attachment: fixed; */
     background-size: cover;
 }
 .img-container-dark{
@@ -17,18 +18,25 @@
     font-size: 1.3em;
     color: #cecece;
 }
+.img-container .header-box .slogan-resize{
+    width: 90vw;
+}
 .img-container .header-box .b-local{
     background-color: rgba(0, 0, 0, 0);
     border-radius:2em;
     padding: .4em 1.3em;
     font-size: .95em;
     border: 2px solid #fff;
+    transition: .2s cubic-bezier(.25,.8,.5,1),color 1ms;
+}
+.img-container .header-box .b-local:hover{
+    background-color: rgba(255, 255, 255, 0.2);
 }
 header{
     z-index: 1;
 }
 nav{
-    padding: .85em 4em;
+    padding: .85em 5vw;
     left: 0;
     right: 0;
     z-index: 2;
@@ -39,6 +47,9 @@ nav .logo img{
 main{
     box-sizing: border-box;
     padding: 3em 1em;
+}
+.tour_section{
+    margin-bottom: 3em;
 }
 .tour_section .tour_box{
     margin: auto;
@@ -51,12 +62,35 @@ main{
     flex: 1;
 }
 .section-name{
+    display: block;
     font-size: 30pt;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+.section-name > div{
+    flex: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.section-name .all-button{
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 12px 15px;
+    background: linear-gradient(45deg, #3cd48f 0%,#55a6a1 100%,#55a6a1 100%);
+}
+.section-name .all-button img{
+    width: 13px;
+}
+.section-name .all-button span{
+    color: #fff;
+    font-weight: bold;
+    font-size: 9pt;
 }
 .tour_card{
     background-color: #ebebeb;
-    height: 377px;
+    height: auto;
     border-radius: 23px;
     margin: 7.5px;
 }
@@ -68,7 +102,7 @@ main{
     background-size: cover;
 }
 .tour_card .card-info{
-    padding: 6px 10px;
+    padding: 6px 10px 10px 10px;
 }
 .tour_card .card-info .status{
     color: #fff;
@@ -96,6 +130,9 @@ main{
     font-size: 14pt;
     font-weight: bolder;
     margin-bottom: .5em;
+    height: 2.4em;
+    line-height: 1.2em;
+    overflow: hidden;
 }
 .tour_card .card-info .rate{
     margin-bottom: .4em;
@@ -129,4 +166,201 @@ main{
 .tour_card .card-info .autor .tour-by span{
     font-weight: bold;
     color: #61c9f8;
+}
+
+
+.blog_card{
+    background-color: #ebebeb;
+    height: 377px;
+    border-radius: 23px;
+    margin: 7.5px;
+}
+
+.blog_card .blog-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+    background-size: cover;
+}
+.blog_card .blog{
+    padding: 16px 12px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+}
+.blog_card .blog .header{
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.blog_card .blog .date{
+    color: #c6c6c6;
+    font-size: 9pt;
+    margin-bottom: 12px;
+}
+.blog_card .blog .text{
+    color: #e2e2e2;
+    font-size: 12.9pt;
+}
+.blog_card .blog .text-more{
+    color: #fff;
+    font-size: 12.9pt;
+    font-weight: bold;
+}
+
+.blog_card .autor{
+    position: absolute;
+    bottom: 16px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+}
+.blog_card .autor .img{
+    width: 29px;
+    height: 29px;
+    border-radius: 100%;
+    background-color: #000;
+    background-size: 100%;
+}
+.blog_card .autor .blog-by{
+    color: #eee;
+    font-size: 9.5pt;
+    margin: 3px 0 0 7px;
+}
+.blog_card .autor .blog-by span{
+    font-weight: bold;
+    color: #61c9f8;
+}
+.blog_card .share{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -5px;
+    font-size: 13pt;
+}
+.blog_card .share img{
+    align-items: center;
+    position: relative;
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    filter: invert(100%);
+}
+
+
+
+
+
+/* MEDIA */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .tour_section .tour_box{
+        margin: auto;
+        width: 290px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-name{
+        display: block;
+        font-size: 20pt;
+        margin-bottom: 5px;
+    }
+    .all-view{
+        margin-left: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .tour_section .tour_box{
+        margin: auto;
+        width: 290px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-name{
+        display: block;
+        font-size: 20pt;
+        margin-bottom: 5px;
+    }
+    .all-view{
+        margin-left: 0;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .tour_section .tour_box{
+        margin: auto;
+        width: 290px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section-name{
+        display: block;
+        font-size: 20pt;
+        margin-bottom: 5px;
+    }
+    .all-view{
+        margin-left: 0;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .tour_section .tour_box{
+        margin: auto;
+        width: 900px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .section-name{
+        display: block;
+        font-size: 30pt;
+        margin-bottom: 5px;
+    }
+    .all-view{
+        margin-left: 15px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .tour_section .tour_box{
+        margin: auto;
+        width: 900px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .section-name{
+        display: block;
+        font-size: 30pt;
+        margin-bottom: 5px;
+    }
+    .all-view{
+        margin-left: 15px;
+    }
 }
