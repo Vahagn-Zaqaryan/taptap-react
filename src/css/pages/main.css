@@ -303,6 +303,47 @@ main{
     font-size: 13px;
     outline: none;
 }
+
+
+
+footer .color-box{
+    width: 100%;
+    padding: 2em 0;
+    height: auto;
+    background-color: #f1f1f1;
+}
+footer .color-box a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer .color-box .sm-button{
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .5s cubic-bezier(.25,.8,.5,1),color 1ms;
+}
+footer .color-box .sm-button:first-child{
+    margin-left: 30px;
+}
+footer .color-box .facebook-b:hover{
+    background-color: rgba(56, 86, 158, 0.15);
+}
+footer .color-box .mail-b:hover{
+    background-color: rgba(232, 79, 75, 0.15);
+}
+footer .color-box .sm-button .icon{
+    margin-right: 6px;
+}
+footer .color-box .sm-button .icon img{
+    width: 30px;
+}
+footer .color-box .sm-button .name{
+    text-transform: uppercase;
+}
+
+
+
+
 /* MEDIA */
 
 /* Extra small devices (phones, 600px and down) */
@@ -325,6 +366,12 @@ main{
     }
     .b-tour-guide .img .img-g .text-box .info{
         width: 70vw;
+    }
+    footer .color-box .link{
+        flex-direction: column;
+    }
+    footer .color-box .sm-button:first-child{
+        margin-left: 0;
     }
 }
 
@@ -349,6 +396,12 @@ main{
     .b-tour-guide .img .img-g .text-box .info{
         width: 60vw;
     }
+    footer .color-box .link{
+        flex-direction: row;
+    }
+    footer .color-box .sm-button:first-child{
+        margin-left: 30px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -371,6 +424,9 @@ main{
     }
     .b-tour-guide .img .img-g .text-box .info{
         width: 45vw;
+    }
+    footer .color-box .link{
+        flex-direction: row;
     }
 }
 
@@ -395,7 +451,11 @@ main{
     .b-tour-guide .img .img-g .text-box .info{
         width: 35vw;
     }
+    footer .color-box .link{
+        flex-direction: row;
+    }
 }
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -417,5 +477,8 @@ main{
     }
     .b-tour-guide .img .img-g .text-box .info{
         width: 350px;
+    }
+    footer .color-box .link{
+        flex-direction: row;
     }
 }

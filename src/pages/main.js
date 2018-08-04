@@ -11,6 +11,8 @@ import Arrow_Right from '../img/arrow_right.svg';
 import Clock from '../img/clock.jpg';
 import Share from '../img/share.svg';
 import TourGuide from '../img/tour_guide.jpg';
+import Facebook from '../img/facebook.svg';
+import Mail from '../img/mail.svg';
 class App extends Component {
 
     handleClickOnBLocal(){
@@ -228,7 +230,24 @@ class App extends Component {
                     </div>
                 </section>
             </main>
-            <footer></footer>
+            <footer>
+                <div className="color-box">
+                    <div className="link d--flex justify-center align-center">
+                        <a href="https://web.facebook.com/TapTapTravel" target="_blank">
+                            <div className="sm-button facebook-b d--flex justify-center align-center">
+                                <div className="icon"><img src={Facebook} alt="Facebook"/></div>
+                                <div className="name" style={{color: "#38569e"}}>@TapTapTravel</div>
+                            </div>
+                        </a>
+                        <a href="taptapstartup@gmail.com" target="_blank">
+                            <div className="sm-button mail-b d--flex justify-center align-center">
+                                <div className="icon"><img src={Mail} alt="Gmail"/></div>
+                                <div className="name" style={{color: "#E84F4B"}}>taptapstartup@gmail.com</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </footer>
           </div>
         );
     }
