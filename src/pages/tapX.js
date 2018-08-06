@@ -6,9 +6,35 @@ import Location from '../img/location.svg';
 import Autor_Img from '../img/autor_img.jpg';
 import Big_Img from '../img/big_img.jpg';
 import Logo from '../img/logo.png'
+import Down_Arrow from '../img/arrow-down.svg';
 class App extends Component {
     componentDidMount () {
         window.scrollTo(0, 0);
+    }
+    handleClickGoDown(){
+        let main = document.getElementById("main");
+        function doScrolling(duration) {
+            let startingY = window.pageYOffset
+            let elementY = main.offsetTop
+            let targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
+            let diff = targetY - startingY
+            let easing = function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 }
+            let start
+
+            if (!diff) return
+                window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp
+            let time = timestamp - start
+            let percent = Math.min(time / duration, 1)
+            percent = easing(percent)
+
+            window.scrollTo(0, startingY + diff * percent)
+                if (time < duration) {
+                    window.requestAnimationFrame(step)
+                }
+            })
+        }
+        doScrolling(1000);
     }
     render() {
         return (
@@ -25,7 +51,7 @@ class App extends Component {
                     </div>
                 </nav>
                 <div className="experience-d d--flex">
-                    <div className="info">
+                    <div className="info" id="main">
                         <div className="info-box">
                             <div className="book-now">
                                 <button>
@@ -65,7 +91,17 @@ class App extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="img" style={{backgroundImage: `url(${Big_Img})`}}></div>
+                    <div className="img" style={{backgroundImage: `url(${Big_Img})`}}>
+                        <div className="down-button">
+                            <div className="downB-gradient" onClick={this.handleClickGoDown.bind(this)}>
+                                <div className="box-flex-downB d--flex justify-center align-center">
+                                    <div className="arrow-downB">
+                                        <img src={Down_Arrow} alt="Go to Tour"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
