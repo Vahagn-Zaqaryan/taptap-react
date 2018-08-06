@@ -44,7 +44,7 @@ class App extends Component {
         return (
           <div className="container">
             <aside></aside>
-            <nav className="pst--abs">
+            <nav className="nav-logo-h pst--abs">
                 <div className="logo">
                     <img src={Logo} alt="Logo" title="Logo"/>
                 </div>
@@ -239,7 +239,7 @@ class App extends Component {
                                 <div className="name" style={{color: "#38569e"}}>@TapTapTravel</div>
                             </div>
                         </a>
-                        <a href="taptapstartup@gmail.com" target="_blank">
+                        <a href="mailto:taptapstartup@gmail.com" target="_blank">
                             <div className="sm-button mail-b d--flex justify-center align-center">
                                 <div className="icon"><img src={Mail} alt="Gmail"/></div>
                                 <div className="name" style={{color: "#E84F4B"}}>taptapstartup@gmail.com</div>
