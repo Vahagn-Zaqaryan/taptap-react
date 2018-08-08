@@ -79,6 +79,7 @@ main{
     border-radius: 10px;
     padding: 12px 15px;
     background: linear-gradient(45deg, #3cd48f 0%,#55a6a1 100%,#55a6a1 100%);
+    display: none;
 }
 .section-name .all-button img{
     width: 13px;

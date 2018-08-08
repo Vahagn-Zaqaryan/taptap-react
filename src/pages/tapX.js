@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom';
 import '../css/pages/experience.css';
 import '../css/tss.css';
 import Location from '../img/location.svg';
-import Autor_Img from '../img/autor_img.jpg';
-import Big_Img from '../img/big_img.jpg';
 import Logo from '../img/logo.png'
 import Down_Arrow from '../img/arrow-down.svg';
+
+// ---DateBase---
+import TourStore from '../stores/tourStore';
+
 class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            tours: TourStore.getAll()
+        };
+    }
     componentDidMount () {
         window.scrollTo(0, 0);
     }
@@ -37,6 +45,11 @@ class App extends Component {
         doScrolling(1000);
     }
     render() {
+        let id = parseInt(this.props.match.params.id, 10);
+        let basa = this.state.tours;
+        let i = basa.findIndex(x => x.id === id);
+        let img = require(`../img/${basa[i].img}`);
+        let author = require(`../img/${basa[i].by.img}`);
         return (
             <div className="experiences">
                 <nav className="nav-tour-d">
@@ -55,7 +68,9 @@ class App extends Component {
                         <div className="info-box">
                             <div className="book-now">
                                 <button>
-                                    <span className="c--white text-t--up font-w--bold">Book Now</span>
+                                    <div className="book-dark-hover">
+                                        <span className="c--white text-t--up font-w--bold">Book Now</span>
+                                    </div>
                                 </button>
                             </div>
                             <div className="location">
@@ -64,34 +79,34 @@ class App extends Component {
                                         <img src={Location} alt="Location"/>
                                     </div>
                                     <div className="loc">
-                                        <span className="f-f--ourF">Yerevan, Armenia</span>
+                                        <span className="f-f--ourF">{basa[i].location.city}, {basa[i].location.country}</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="header">
-                                <h1 className="f-f--ourF">Spacious, crozy & bright studio</h1>
+                                <h1 className="f-f--ourF">{basa[i].header}</h1>
                             </div>
                             <div className="lang">
-                                <span className="f-f--ourF">Language • <span className="f-f--ourF">English</span></span>
+                                <span className="f-f--ourF">Language • <span className="f-f--ourF">{basa[i].language}</span></span>
                             </div>
                             <div className="text">
-                                Lorem ipsum dolor sit amet, tale ludus omnesque nec an. Pri minim probatus ex, nulla ubique eruditi eu pri. No ullum ridens antiopam vel, veritus corpora philosophia pri ei. Ea sit luptatum adversarium, duo decore fabulas accusam id. Cu habeo equidem necessitatibus cum. Facer errem tempor per ut, mazim vivendo comprehensam..
+                                {basa[i].info}
                             </div>
                             <div className="mapping">
 
                             </div>
                             <div className="tour-by">
                                 <div className="tour-by-box d--flex align-center">
-                                    <div className="img-author" style={{backgroundImage: `url(${Autor_Img})`}}></div>
+                                    <div className="img-author" style={{backgroundImage: `url(${author})`}}></div>
                                     <div className="author">
                                         <div className="label">Tour by</div>
-                                        <div className="name">Vahagn Zaqaryan</div>
+                                        <div className="name">{basa[i].by.name}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="img" style={{backgroundImage: `url(${Big_Img})`}}>
+                    <div className="img" style={{backgroundImage: `url(${img})`}}>
                         <div className="down-button">
                             <div className="downB-gradient" onClick={this.handleClickGoDown.bind(this)}>
                                 <div className="box-flex-downB d--flex justify-center align-center">
