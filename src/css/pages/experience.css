@@ -29,6 +29,7 @@
 }
 
 .experience-d .info .info-box .book-now button{
+    cursor: pointer;    
     border: none;
     background: linear-gradient(45deg, #e04b40 0%, #e06940 100%);
     font-size: 14px;
@@ -165,9 +166,16 @@
 
 .nav-tour-d{
     z-index: 9;
-    width: 100%;
+    width: auto;
     height: auto;
     position: absolute;
+    left: calc(50% - 32.5px);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .nav-tour-d .logo-box{
@@ -204,6 +212,9 @@
         justify-content: flex-start;
         padding: 1em;
     }
+    .nav-tour-d{
+        left: inherit;
+    }
     .experience-d .img .down-button{
         display: inherit;
     }
@@ -224,6 +235,9 @@
     .nav-tour-d .logo-box{
         padding: 1em;
         justify-content: flex-start;
+    }
+    .nav-tour-d{
+        left: inherit;
     }
     .experience-d .img .down-button{
         display: inherit;
@@ -247,6 +261,9 @@
         padding: 1em 0;
         justify-content: center;
     }
+    .nav-tour-d{
+        left: calc(50% - 32.5px);
+    }
     .experience-d .img .down-button{
         display: none;
     }
@@ -264,6 +281,9 @@
     }
     .experience-d .info .info-box{
         padding: 2em 4em;
+    }
+    .nav-tour-d{
+        left: calc(50% - 32.5px);
     }
     .nav-tour-d .logo-box{
         padding: 1em 0;
@@ -287,6 +307,9 @@
     }
     .experience-d .info .info-box{
         padding: 2em 4em;
+    }
+    .nav-tour-d{
+        left: calc(50% - 32.5px);
     }
     .nav-tour-d .logo-box{
         padding: 1em 0;

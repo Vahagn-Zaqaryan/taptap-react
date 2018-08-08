@@ -218,8 +218,8 @@ class App extends Component {
                         </a>
                         <a href="mailto:taptapstartup@gmail.com" target="_blank" rel="noopener noreferrer"  >
                             <div className="sm-button mail-b d--flex justify-center align-center">
-                                <div className="icon"><img src={Mail} alt="Gmail"/></div>
-                                <div className="name" style={{color: "#E84F4B"}}>taptapstartup@gmail.com</div>
+                                <div className="icon" style={{marginRight: "18px"}}><img src={Mail} alt="Gmail"/></div>
+                                <div className="name" style={{color: "#C10000"}}> taptapstartup@gmail.com</div>
                             </div>
                         </a>
                     </div>

@@ -319,6 +319,7 @@ footer .color-box a{
 }
 
 footer .color-box .sm-button{
+    font-size: 15px;
     border-radius: 5px;
     padding: 5px 10px;
     transition: .5s cubic-bezier(.25,.8,.5,1),color 1ms;
@@ -326,17 +327,17 @@ footer .color-box .sm-button{
 footer .color-box .sm-button:first-child{
     margin-left: 30px;
 }
+footer .color-box .sm-button .icon{
+    margin-right: 10px;
+}
 footer .color-box .facebook-b:hover{
     background-color: rgba(56, 86, 158, 0.15);
 }
 footer .color-box .mail-b:hover{
-    background-color: rgba(232, 79, 75, 0.15);
-}
-footer .color-box .sm-button .icon{
-    margin-right: 6px;
+    background-color: rgb(193, 0, 0, 0.1);
 }
 footer .color-box .sm-button .icon img{
-    width: 30px;
+    height: 30px;
 }
 footer .color-box .sm-button .name{
     text-transform: uppercase;
