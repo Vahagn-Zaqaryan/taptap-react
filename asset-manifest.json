@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.bd7d344b.css",
-  "main.css.map": "static/css/main.bd7d344b.css.map",
-  "main.js": "static/js/main.129163c7.js",
-  "main.js.map": "static/js/main.129163c7.js.map",
+  "main.css": "static/css/main.fc894f1e.css",
+  "main.css.map": "static/css/main.fc894f1e.css.map",
+  "main.js": "static/js/main.9ee8f261.js",
+  "main.js.map": "static/js/main.9ee8f261.js.map",
   "static\\media\\FredokaOne-Regular.ttf": "static/media/FredokaOne-Regular.5165c0fa.ttf",
   "static\\media\\arrow-down.svg": "static/media/arrow-down.a9d3bf21.svg",
   "static\\media\\arrow_right.svg": "static/media/arrow_right.3e11119e.svg",
@@ -12,10 +12,12 @@
   "static\\media\\clock.jpg": "static/media/clock.fb3cb1f0.jpg",
   "static\\media\\facebook.svg": "static/media/facebook.2badf142.svg",
   "static\\media\\location.svg": "static/media/location.aa0b46eb.svg",
+  "static\\media\\logo.svg": "static/media/logo.20c79684.svg",
   "static\\media\\mail.svg": "static/media/mail.2954084f.svg",
   "static\\media\\maket.png": "static/media/maket.711b1940.png",
   "static\\media\\share.svg": "static/media/share.a4d12ac2.svg",
   "static\\media\\star.svg": "static/media/star.16a5a708.svg",
   "static\\media\\tour_guide.jpg": "static/media/tour_guide.e3ae1e28.jpg",
+  "static\\media\\unstar.svg": "static/media/unstar.1ce8d561.svg",
   "static\\media\\yerevan.jpg": "static/media/yerevan.da028c4f.jpg"
 }
