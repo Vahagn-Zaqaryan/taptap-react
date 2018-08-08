@@ -1,15 +1,15 @@
 {
   "main.css": "static/css/main.e4b8413f.css",
   "main.css.map": "static/css/main.e4b8413f.css.map",
-  "main.js": "static/js/main.9ee8f261.js",
-  "main.js.map": "static/js/main.9ee8f261.js.map",
+  "main.js": "static/js/main.6c68002e.js",
+  "main.js.map": "static/js/main.6c68002e.js.map",
   "static\\media\\FredokaOne-Regular.ttf": "static/media/FredokaOne-Regular.5165c0fa.ttf",
   "static\\media\\arrow-down.svg": "static/media/arrow-down.a9d3bf21.svg",
   "static\\media\\arrow_right.svg": "static/media/arrow_right.3e11119e.svg",
-  "static\\media\\autor_img.jpg": "static/media/autor_img.97a80a38.jpg",
-  "static\\media\\banner.png": "static/media/banner.86266771.png",
-  "static\\media\\big_img.jpg": "static/media/big_img.5c7c194c.jpg",
-  "static\\media\\clock.jpg": "static/media/clock.fb3cb1f0.jpg",
+  "static\\media\\autor_img.jpg": "static/media/autor_img.d7d7d80b.jpg",
+  "static\\media\\banner.jpg": "static/media/banner.5ec97dee.jpg",
+  "static\\media\\big_img.jpg": "static/media/big_img.5c8a17cd.jpg",
+  "static\\media\\clock.jpg": "static/media/clock.93d42a42.jpg",
   "static\\media\\facebook.svg": "static/media/facebook.2badf142.svg",
   "static\\media\\location.svg": "static/media/location.aa0b46eb.svg",
   "static\\media\\logo.svg": "static/media/logo.20c79684.svg",
@@ -17,7 +17,7 @@
   "static\\media\\maket.png": "static/media/maket.711b1940.png",
   "static\\media\\share.svg": "static/media/share.a4d12ac2.svg",
   "static\\media\\star.svg": "static/media/star.16a5a708.svg",
-  "static\\media\\tour_guide.jpg": "static/media/tour_guide.e3ae1e28.jpg",
+  "static\\media\\tour_guide.jpg": "static/media/tour_guide.3fa66671.jpg",
   "static\\media\\unstar.svg": "static/media/unstar.1ce8d561.svg",
-  "static\\media\\yerevan.jpg": "static/media/yerevan.da028c4f.jpg"
+  "static\\media\\yerevan.jpg": "static/media/yerevan.4c657f11.jpg"
 }
