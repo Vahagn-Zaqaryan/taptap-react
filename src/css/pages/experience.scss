@@ -1,0 +1,363 @@
+$color_valencia_approx: #e04b40;
+$color_red_damask_approx: #e06940;
+$black_16: rgba(0, 0, 0, 0.16);
+$color_texas_rose_approx: #ffb34f;
+$color_masala_approx: #3e3e3e;
+$color_concord_approx: #7d7d7d;
+$color_chicago_approx: #5d5d5d;
+$black: black;
+$color_tapa_approx: #737373;
+$color_turquoise_blue_approx: #61c9f8;
+$black_10: rgba(0,0,0,0.1);
+$black_90: rgba(0,0,0,0.9);
+$black_100: rgba(0,0,0,1);
+$white_50: rgba(255, 255, 255, 0.5);
+$white: #fff;
+$white_100: rgba(255, 255, 255, 1);
+$color_concord_50_approx: rgba(125, 125, 125, 0.5);
+
+@mixin desktop {
+    @media only screen and(min-width: 1200px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media only screen and(min-width: 992px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and(min-width: 768px) {
+        @content;
+    }
+}
+@mixin lphone {
+    @media only screen and(min-width: 600px) {
+    	@content;
+    }
+}
+@mixin phone {
+    @media only screen and(max-width: 600px) {
+    	@content;
+    }
+}
+
+.experience-d {
+	width: 100%;
+	height: auto;
+	flex-direction: row;
+    @include phone {
+        flex-direction: column-reverse;
+    }
+    @include lphone {
+        flex-direction: column-reverse;
+    }
+    @include tablet {
+        flex-direction: row;
+    }
+    @include laptop {
+        flex-direction: row;
+    }
+    @include desktop {
+        flex-direction: row;
+    }
+	.info {
+		flex: 1;
+		height: 100vh;
+		overflow: auto;
+		overflow-x: hidden;
+        @include phone {
+            height: auto;
+            overflow-x: hidden;
+        }
+        @include lphone {
+            height: auto;
+            overflow-x: hidden;
+        }
+        @include tablet {
+            height: 100vh;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+        @include laptop {
+            height: 100vh;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+        @include desktop {
+            height: 100vh;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+		.info-box {
+			width: 100%;
+			height: auto;
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: border-box;
+			padding: 2em 4em;
+            @include phone {
+                padding: 2em;
+            }
+            @include lphone {
+                padding: 2em;
+            }
+            @include tablet {
+                padding: 2em 3em;
+            }
+            @include laptop {
+                padding: 2em 4em;
+            }
+            @include desktop {
+                padding: 2em 4em;
+            }
+			.book-now {
+				margin-bottom: 1.5em;
+				//Instead of the line below you could use @include user-select($select)
+				user-select: none;
+				button {
+					cursor: pointer;
+					border: none;
+					background: linear-gradient(45deg, $color_valencia_approx 0, $color_red_damask_approx 100%);
+					font-size: 14px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 25px;
+					outline: none;
+					.book-dark-hover {
+						padding: 0.7em 1.5em;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 25px;
+						width: 100%;
+						height: 100%;
+						//Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+						transition-property: background;
+						//Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+						transition-duration: 0.2s;
+						//Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+						transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+						//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
+						transition-delay: 0s;
+					}
+					span {
+						vertical-align: middle;
+					}
+					&:hover > .book-dark-hover {
+						background-color: $black_16;
+					}
+				}
+			}
+			.location {
+				margin-bottom: 0.6em;
+				.loc-box {
+					flex-direction: row;
+					.icon {
+						margin-right: 7px;
+						img {
+							width: 12px;
+						}
+					}
+					.loc {
+						font-size: 15px;
+						color: $color_texas_rose_approx;
+					}
+				}
+			}
+			.header {
+				margin-bottom: 0.6em;
+				h1 {
+					font-size: 40px;
+				}
+			}
+			.lang {
+				margin-bottom: 1.5em;
+				span {
+					color: $color_masala_approx;
+					font-size: 15px;
+					span {
+						color: $color_concord_approx;
+						font-size: 15px;
+					}
+				}
+			}
+			.text {
+				color: $color_chicago_approx;
+				margin-bottom: 1.5em;
+				font-size: 18px;
+			}
+			.mapping {
+				width: 100%;
+				height: 140px;
+				background-color: $black;
+				margin-bottom: 1.5em;
+			}
+			.tour-by .tour-by-box {
+				.img-author {
+					width: 35px;
+					height: 35px;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 100%;
+					background-color: $black;
+					background-size: 100%;
+				}
+				.author {
+					margin-left: 10px;
+					.label {
+						color: $color_tapa_approx;
+						font-size: 10px;
+					}
+					.name {
+						color: $color_turquoise_blue_approx;
+						font-size: 12px;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	.img {
+		flex: 1;
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		.down-button {
+			height: 100%;
+			width: 100%;
+			position: relative;
+            @include phone {
+                display: inherit;
+            }
+            @include lphone {
+                display: inherit;
+            }
+            @include tablet {
+                display: none;
+            }
+            @include laptop {
+                display: none;
+            }
+            @include desktop {
+                display: none;
+            }
+			.downB-gradient {
+				width: 100%;
+				//Instead of the line below you could use @include box-sizing($bs)
+				box-sizing: border-box;
+				position: absolute;
+				bottom: 0;
+				background: linear-gradient(180deg, $black_10 0, $black_90 63%, $black_100 100%);
+				.short-info-box-img-t {
+					padding: 0.9em 1.2em;
+					.list-box-img-t .item-box-img-t {
+						.text-box-img-t {
+							margin-left: 10px;
+						}
+						&:not(:last-child) {
+							margin: 10px 0;
+						}
+						.icon-box-img-t img {
+							width: 20px;
+						}
+					}
+				}
+				.section-border-img-t {
+					width: 100%;
+					//Instead of the line below you could use @include box-sizing($bs)
+					box-sizing: border-box;
+					padding: 0 1.2em;
+					div {
+						width: 100%;
+						background-color: $white_50;
+						height: 2px;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 3px;
+					}
+				}
+				.box-flex-downB .arrow-downB {
+					padding: 0.9em 1.2em;
+					.down-button {
+						flex: 2;
+						img {
+							width: 29px;
+							height: 29px;
+						}
+					}
+					.book-now-imgB {
+						justify-content: flex-end;
+						flex: 3;
+						button {
+							//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+							border-radius: 10px;
+							outline: none;
+							border: solid $white 2px;
+							background-color: $white_100;
+							padding: 0.8em 2em;
+							color: $black_100;
+							//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+							box-shadow: $color_concord_50_approx 0 0 4px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.nav-tour-d {
+	z-index: 9;
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: calc(50% - 32.5px);
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+    @include phone {
+        left: inherit;
+    }
+    @include lphone {
+        left: inherit;
+    }
+    @include tablet {
+        left: calc(50% - 32.5px);
+    }
+    @include laptop {
+        left: calc(50% - 32.5px);
+    }
+    @include desktop {
+        left: calc(50% - 32.5px);
+    }
+	.logo-box {
+		padding: 1em 0;
+        @include phone {
+            padding: 1em ;
+            justify-content: flex-start;
+        }
+        @include lphone {
+            padding: 1em ;
+            justify-content: flex-start;
+        }
+        @include tablet {
+            padding: 1em 0;
+            justify-content: center;
+        }
+        @include laptop {
+            padding: 1em 0;
+            justify-content: center;
+        }
+        @include desktop {
+            padding: 1em 0;
+            justify-content: center;
+        }
+		.circle-logo {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 100%;
+			width: 65px;
+			height: 65px;
+			background: linear-gradient(45deg, $color_valencia_approx 0, $color_red_damask_approx 100%);
+			div {
+				position: relative;
+				top: 3px;
+			}
+			img {
+				width: 45px;
+			}
+		}
+	}
+}

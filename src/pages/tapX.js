@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/pages/experience.css';
+import '../css/pages/experience.min.css';
 import '../css/tss.css';
 import Location from '../img/location.svg';
 import Logo from '../img/logo.png'
 import Down_Arrow from '../img/arrow-down.svg';
+import Clock from '../img/clock.svg';
+import Location_White from '../img/location-white.svg';
+import Speak from '../img/speech-bubbles.svg';
 
 // ---DateBase---
 import TourStore from '../stores/tourStore';
@@ -108,10 +111,48 @@ class App extends Component {
                     </div>
                     <div className="img" style={{backgroundImage: `url(${img})`}}>
                         <div className="down-button">
-                            <div className="downB-gradient" onClick={this.handleClickGoDown.bind(this)}>
-                                <div className="box-flex-downB d--flex justify-center align-center">
-                                    <div className="arrow-downB">
-                                        <img src={Down_Arrow} alt="Go to Tour"/>
+                            <div className="downB-gradient">
+                                <div className="short-info-box-img-t">
+                                    <div className="list-box-img-t">
+                                        <div className="item-box-img-t d--flex align-center">
+                                            <div className="icon-box-img-t">
+                                                <img src={Clock} alt="Duration"/>
+                                            </div>
+                                            <div className="text-box-img-t c--white">
+                                                2 hours total
+                                            </div>
+                                        </div>
+                                        <div className="item-box-img-t d--flex align-center">
+                                            <div className="icon-box-img-t">
+                                                <img src={Location_White} alt="Duration"/>
+                                            </div>
+                                            <div className="text-box-img-t c--white">
+                                                Yerevan, Armenia
+                                            </div>
+                                        </div>
+                                        <div className="item-box-img-t d--flex align-center">
+                                            <div className="icon-box-img-t">
+                                                <img src={Speak} alt="Duration"/>
+                                            </div>
+                                            <div className="text-box-img-t c--white">
+                                                English
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="section-border-img-t">
+                                     <div></div>
+                                </div>
+                                <div className="box-flex-downB">
+                                    <div className="arrow-downB d--flex w--full align-center">
+                                        <div className="down-button" onClick={this.handleClickGoDown.bind(this)}>
+                                            <img src={Down_Arrow} alt="Go to Tour"/>
+                                        </div>
+                                        <div className="book-now-imgB d--flex">
+                                            <button>
+                                                <span className="f-f--ourF text-t--up ">Book Now</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
