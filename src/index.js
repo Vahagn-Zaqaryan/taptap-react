@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
+import './css/index.min.css';
 import App from './App';
 import { HashRouter as Router } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';

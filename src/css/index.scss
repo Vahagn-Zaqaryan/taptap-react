@@ -1,0 +1,51 @@
+//colors
+$color_bombay_approx: #b3b3b9;
+$alabaster: #fafafa;
+$color_mountain_mist_approx: #919197;
+$white: #fff;
+
+//fonts
+$font_0: arial;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: $font_0;
+	background-repeat: no-repeat;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+::after {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+::before {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+}
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+}
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $color_bombay_approx;
+	border: 0 none $alabaster;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50px;
+	&:hover {
+		background-color: $color_mountain_mist_approx;
+	}
+}
+::-webkit-scrollbar-track {
+	background-color: $alabaster;
+	border: 0 none $white;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 50px;
+}

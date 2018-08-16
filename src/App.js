@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/style.css';
-import './css/tss.css';
+import './css/style.min.css';
+import './css/tss.min.css';
 import { Route } from 'react-router-dom';
 import Main from './pages/main';
 import TapX from './pages/tapX';

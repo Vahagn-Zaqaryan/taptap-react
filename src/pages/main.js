@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/tss.css';
-import '../css/pages/main.css';
+import '../css/tss.min.css';
+import '../css/pages/main.min.css';
 import Logo from '../img/logo.png'
 import Banner from '../img/banner.jpg';
 import Star_Rate from '../img/star.svg';

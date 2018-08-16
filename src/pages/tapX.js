@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/pages/experience.min.css';
-import '../css/tss.css';
+import '../css/tss.min.css';
 import Location from '../img/location.svg';
 import Logo from '../img/logo.png'
 import Down_Arrow from '../img/arrow-down.svg';
