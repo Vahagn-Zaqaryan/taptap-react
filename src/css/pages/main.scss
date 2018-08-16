@@ -1,4 +1,5 @@
 //colors
+$taptap_pcolor: #e04b40;
 $black_35: rgba(0, 0, 0, 0.35);
 $color_celeste_approx: #cecece;
 $white: #fff;
@@ -96,6 +97,9 @@ main {
 		display: inline-block;
 		vertical-align: middle;
 	}
+	.red_dot {
+		color: $taptap_pcolor;
+	}
 	.all-button {
 		outline: none;
 		border: none;
@@ -139,7 +143,7 @@ main {
 		background-size: cover;
 	}
 	.card-info {
-		padding: 8px 10px 10px;
+		padding: 10px 10px 10px;
 		.status {
 			color: $white;
 			background: linear-gradient(45deg, $color_shamrock_approx 0,$color_turquoise_approx 100%,$color_jordy_blue_approx 100%);
@@ -173,7 +177,7 @@ main {
 			color: $black;
 			font-size: 14pt;
 			font-weight: bolder;
-			margin-bottom: .5em;
+			margin-bottom: .4em;
 			height: 2.4em;
 			line-height: 1.2em;
 			overflow: hidden;
@@ -185,6 +189,7 @@ main {
 				margin-right: 3px;
 			}
 			span {
+				margin-left: .1em;
 				font-weight: bold;
 				color: $black;
 				font-size: 11pt;

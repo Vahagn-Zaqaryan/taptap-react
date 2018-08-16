@@ -114,7 +114,7 @@ class App extends Component {
                         <div className="flex-container font-w--bold section-name">
                             <div>
                                 <span>
-                                    Our Fantastic Tours
+                                    Our Fantastic Tours<span className="red_dot">.</span>
                                 </span>
                             </div>
                             <div className="all-view">
@@ -135,7 +135,7 @@ class App extends Component {
                         <div className="flex-container font-w--bold section-name">
                             <div>
                                 <span>
-                                    Our Recent Blogs
+                                    Our Recent Blogs<span className="red_dot">.</span>
                                 </span>
                             </div>
                             <div className="all-view">
