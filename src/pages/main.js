@@ -73,6 +73,8 @@ class App extends Component {
                                 <img src={Star_Rate} alt="Star" title="Star"/>
                                 <span className="rate_number">{tours.review.count}</span>
                             </div>
+                            <div className="seperater_tour">
+                            </div>
                             <div className="autor">
                                 <div className="img" style={{backgroundImage: `url(${author})`}}></div>
                                 <div className="tour-by">Tour by <span className="rate_number">{tours.by.name}</span></div>

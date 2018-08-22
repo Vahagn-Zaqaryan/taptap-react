@@ -146,7 +146,8 @@ main {
 		padding: 10px 10px 10px;
 		.status {
 			color: $white;
-			background: linear-gradient(45deg, $color_shamrock_approx 0,$color_turquoise_approx 100%,$color_jordy_blue_approx 100%);
+			background: linear-gradient(45deg, #d2d43c 0,#6def38 100%);
+			background: linear-gradient(45deg, #d2d43c	 0,#4bcd16 100%);
 			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 			border-radius: 100%;
 			width: 68px;
@@ -195,11 +196,20 @@ main {
 				font-size: 11pt;
 			}
 		}
+		.seperater_tour{
+			width: 100%;
+			height: 1px;
+			background-color: rgb(222, 222, 222);
+			margin-bottom: .2em;
+		}
 		.autor {
 			flex-direction: row;
 			display: flex;
 			align-items: center;
 			.img {
+				// border: 1px solid rgb(222, 222, 222);
+				box-shadow: $color_concord_50_approx 0 0 2px 0;
+
 				width: 29px;
 				height: 29px;
 				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
